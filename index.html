@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AIOA Consulting | Microsoft 365 Consulting & Automation</title>
-    <meta name="description" content="AIOA Consulting helps organisations strengthen Microsoft 365 security, optimise licences, and automate IT operations.">
+    <meta name="description" content="AIOA Consulting helps companies optimise Microsoft 365 licences, strengthen security and automate processes.">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -13,37 +13,32 @@
             --blue-dark: #0B1B2B;
             --blue-main: #004C80;
             --blue-light: #2A82DA;
-            --yellow: #F2C230;
             --bg-light: #E9F2FB;
+            --yellow: #F2C230;
             --white: #ffffff;
-            --text-main: #0d0d0d;
-            --text-muted: #666666;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
             font-family: 'Inter', sans-serif;
             background: #f5f7fb;
-            color: var(--text-main);
+            color: #0d0d0d;
+            overflow-x: hidden;
         }
 
-        a { color: var(--blue-main); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        a { text-decoration: none; color: inherit; }
 
-        /* ------------ LAYOUT CONTAINER ------------ */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 1.2rem;
-        }
+        /* ---------- HEADER ---------- */
 
-        /* ------------ HEADER ------------ */
         header {
             background: var(--bg-light);
-            padding: 1.5rem 0 0.5rem;
+            padding: 1.5rem 1.5rem 0.5rem;
         }
 
         .nav {
+            max-width: 1100px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -56,13 +51,7 @@
         }
 
         .nav-logo img {
-            height: 65px;
-            width: auto;
-        }
-
-        .nav-logo span {
-            font-size: 1.1rem;
-            font-weight: 700;
+            height: 45px;
         }
 
         .nav-cta a {
@@ -71,79 +60,77 @@
             border-radius: 999px;
             color: var(--blue-dark);
             font-weight: 600;
+            white-space: nowrap;
         }
 
-        /* ------------ HERO ------------ */
+        /* ---------- HERO ---------- */
+
         .hero {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 0 3rem;
             display: grid;
             grid-template-columns: 3fr 2fr;
-            gap: 2.8rem;
-            padding: 2.5rem 0 3rem;
+            gap: 2.5rem;
             align-items: center;
         }
 
         .hero h1 {
             font-size: 2.6rem;
             margin-bottom: 0.8rem;
+            line-height: 1.2;
         }
 
-        .hero h1 span {
-            color: var(--blue-main);
-        }
+        .hero h1 span { color: var(--blue-main); }
 
         .hero-sub {
-            font-size: 1.06rem;
-            margin-bottom: 1.5rem;
-            color: #334;
+            font-size: 1.08rem;
+            margin-bottom: 1.4rem;
+            color: #333;
         }
 
         .hero-badges {
             display: flex;
             flex-wrap: wrap;
             gap: 0.6rem;
-            margin-bottom: 1.6rem;
+            margin-bottom: 1.7rem;
         }
 
         .badge {
-            background: rgba(0,0,0,0.05);
-            padding: 0.35rem 0.9rem;
+            background: rgba(0,0,0,0.06);
+            padding: 0.4rem 0.9rem;
             border-radius: 999px;
-            font-size: 0.8rem;
-            color: var(--blue-dark);
+            font-size: 0.85rem;
         }
 
         .hero-actions {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
+            margin-top: 0.8rem;
         }
 
         .btn-primary {
             background: var(--blue-main);
-            color: var(--white);
-            padding: 0.8rem 1.6rem;
+            color: white;
+            padding: 0.9rem 1.8rem;
+            font-size: 1.15rem;
             border-radius: 999px;
             font-weight: 600;
+            display: inline-block;
         }
 
-        .btn-ghost {
-            color: var(--blue-dark);
-            font-weight: 600;
-        }
+        /* ---------- PHOTO CARD ---------- */
 
-        /* FOTO CENTRADA */
         .hero-photo-wrapper {
             display: flex;
             justify-content: center;
         }
 
         .hero-photo-card {
-            background: var(--white);
-            padding: 1rem;
+            background: white;
             border-radius: 1.2rem;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.16);
-            margin: 0 auto;
+            padding: 1rem;
+            max-width: 300px;
             text-align: center;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
         }
 
         .hero-photo-card img {
@@ -151,60 +138,56 @@
             height: 260px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: center 15%;
+            object-position: center 10%;
         }
 
         .hero-photo-card .caption {
-            text-align: center;
-            margin-top: 0.5rem;
-            font-size: 0.85rem;
-            color: var(--text-muted);
+            margin-top: 0.6rem;
+            color: #444;
         }
 
-        /* ------------ SECTION TITLES ------------ */
-        section { margin-bottom: 3rem; }
+        /* ---------- SERVICES ---------- */
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
+        }
+
         .section-title {
-            font-size: 1.5rem;
-            margin-bottom: 1.3rem;
+            font-size: 1.55rem;
+            margin-bottom: 1.2rem;
         }
-        .section-title span { color: var(--blue-main); }
 
-        /* ------------ SERVICES ------------ */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.8rem;
+            gap: 1.4rem;
         }
 
         .card {
-            background: var(--white);
+            background: white;
             padding: 1.5rem;
             border-radius: 1rem;
             border-top: 4px solid var(--blue-main);
             box-shadow: 0 10px 20px rgba(0,0,0,0.06);
         }
 
-        .card h3 { margin-bottom: 0.6rem; }
-        .card p { color: var(--text-muted); line-height: 1.45; }
-
-        /* ------------ CONTACT ------------ */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
+        /* ---------- CONTACT SECTION ---------- */
 
         iframe {
             width: 100%;
             height: 650px;
+            border-radius: 1rem;
             border: none;
         }
 
-        /* ------------ FOOTER ------------ */
+        /* ---------- FOOTER ---------- */
+
         footer {
             background: var(--blue-dark);
             color: #d7deec;
-            padding: 1.2rem 0;
+            padding: 1.2rem 1.5rem;
         }
 
         footer .footer-inner {
@@ -214,21 +197,34 @@
             justify-content: space-between;
         }
 
-        /* ------------ MOBILE FIXES ------------ */
-        @media (max-width: 850px) {
+        /* ---------- MOBILE FIXES ---------- */
+
+        @media (max-width: 750px) {
+
+            .nav {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+
             .hero {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
 
-            .hero-actions { justify-content: center; }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
+            .hero-actions {
+                display: flex;
+                justify-content: center;
+                margin-top: 1rem;
             }
 
-            iframe {
-                height: 780px;
+            .hero-badges {
+                justify-content: center;
+            }
+
+            .btn-primary {
+                width: 90%;
+                max-width: 340px;
             }
         }
     </style>
@@ -237,17 +233,18 @@
 <body>
 
 <header>
-    <div class="container nav">
+    <div class="nav">
         <div class="nav-logo">
-            <img src="logo-aioa.png">
+            <img src="logo-aioa.png" alt="">
             <span>AIOA Consulting</span>
         </div>
+
         <div class="nav-cta">
             <a href="#contact">Book a free consultation</a>
         </div>
     </div>
 
-    <div class="container hero">
+    <div class="hero">
         <div>
             <h1><span>Microsoft 365</span> Consulting & Automation</h1>
 
@@ -263,61 +260,45 @@
 
             <div class="hero-actions">
                 <a class="btn-primary" href="#contact">Schedule a call</a>
-                <a class="btn-ghost" href="mailto:info@aioaconsulting.com">Or email us directly →</a>
             </div>
         </div>
 
         <div class="hero-photo-wrapper">
             <div class="hero-photo-card">
-                <img src="adrian.jpg">
+                <img src="adrian.jpg" alt="">
                 <p class="caption">Adrián Fernández · Microsoft 365 Consultant</p>
             </div>
         </div>
     </div>
 </header>
 
-<main class="container">
+<main>
 
-    <!-- SERVICES -->
     <section id="services">
         <h2 class="section-title"><span>Services</span> we provide</h2>
 
         <div class="services-grid">
-
             <div class="card">
                 <h3>Tenant management & governance</h3>
-                <p>We operate, secure and maintain your Microsoft 365 environment so it stays reliable, compliant and aligned with best practices.</p>
+                <p>We maintain, optimise and secure your Microsoft 365 environment end-to-end.</p>
             </div>
 
             <div class="card">
                 <h3>License & cost optimisation</h3>
-                <p>We review your licensing usage, detect inefficiencies, and build a clean, cost-effective licensing strategy.</p>
+                <p>We help you reduce costs by identifying unused licences and proposing an optimised model.</p>
             </div>
 
             <div class="card">
                 <h3>Automation & scripting</h3>
-                <p>We automate onboarding, permissions, reporting and daily IT tasks using PowerShell and Microsoft Graph.</p>
+                <p>We automate onboarding, permissions, workflows and admin tasks using PowerShell & Graph API.</p>
             </div>
-
         </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact">
         <h2 class="section-title"><span>Let’s talk</span> about your tenant</h2>
 
-        <div class="contact-grid">
-
-            <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=7cdPpwJ_WE2LFLmwQiNv3QO3VYcVRyZAqodJdf0yPkZUQ1ZGNDJEN1hXTkZBNFhDWjA2NVdSMThSRC4u&embed=true" allowfullscreen></iframe>
-
-            <div>
-                <p>Prefer email or a call?</p>
-                <p>📞 <a href="tel:+34665088138">+34 665 08 81 38</a></p>
-                <p>✉️ <a href="mailto:info@aioaconsulting.com">info@aioaconsulting.com</a></p>
-                <p>🌐 <a href="https://www.aioaconsulting.com">www.aioaconsulting.com</a></p>
-            </div>
-
-        </div>
+        <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=7cdPpwJ_WE2LFLmwQiNv3QO3VYcVRyZAqodJdf0yPkZUQ1ZGNDJEN1hXTkZBNFhDWjA2NVdSMThSRC4u&embed=true"></iframe>
     </section>
 
 </main>
