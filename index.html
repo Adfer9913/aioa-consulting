@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIOA Consulting | Microsoft 365 Consulting & Automation</title>
+    <meta name="description" content="AIOA Consulting helps companies optimise Microsoft 365 licences, strengthen security and automate processes.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --blue-dark: #0B1B2B;
+            --blue-main: #004C80;
+            --blue-light: #2A82DA;
+            --green: #3A9D23;
+            --yellow: #F2C230;
+            --bg-light: #E9F2FB;
+            --white: #ffffff;
+            --text-main: #0d0d0d;
+            --text-muted: #666666;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f5f7fb;
+            color: var(--text-main);
+        }
+
+        a { color: var(--blue-main); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ---------------- HEADER ---------------- */
+
+        header {
+            background: var(--bg-light);
+            color: var(--blue-dark);
+            padding: 1.5rem 1.5rem 0.5rem;
+        }
+
+        .nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+
+        .nav-logo img {
+            height: 80px; /* LOGO MÁS GRANDE */
+            width: auto;
+        }
+
+        .nav-logo span {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .nav-cta a {
+            background: var(--yellow);
+            padding: 0.6rem 1.3rem;
+            border-radius: 999px;
+            color: var(--blue-dark);
+            font-weight: 600;
+        }
+
+        /* ---------------- HERO ---------------- */
+
+        .hero {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 0 3rem;
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            align-items: center;
+            gap: 2.8rem;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero h1 span {
+            color: var(--blue-main);
+        }
+
+        .hero-sub {
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            color: #334;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-bottom: 1.6rem;
+        }
+
+        .badge {
+            background: rgba(0,0,0,0.05);
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            color: var(--blue-dark);
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--blue-main);
+            color: var(--white);
+            padding: 0.8rem 1.6rem;
+            border-radius: 999px;
+            font-weight: 600;
+        }
+
+        .btn-ghost { color: var(--blue-dark); }
+
+        .hero-photo-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-photo-card {
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 1.2rem;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.18);
+        }
+
+        .hero-photo-card img {
+            width: 260px;  /* FOTO MÁS GRANDE */
+            height: 260px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 15%; /* AJUSTE DE CENTRADO */
+            display: block;
+        }
+
+        .hero-photo-card .caption {
+            text-align: center;
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* ---------------- MAIN ---------------- */
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 4rem;
+        }
+
+        section { margin-bottom: 3rem; }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.3rem;
+        }
+
+        .section-title span { color: var(--blue-main); }
+
+        /* SERVICES GRID */
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border-top: 4px solid var(--blue-main);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+        }
+
+        .card h3 { margin-bottom: 0.6rem; }
+        .card p { color: var(--text-muted); }
+
+        /* ---------------- ABOUT ---------------- */
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: 2.1fr 1.4fr;
+            gap: 2rem;
+        }
+
+        .pill-list { list-style: none; }
+        .pill-list li {
+            background: var(--white);
+            padding: 0.6rem 1rem;
+            border-radius: 999px;
+            margin-bottom: 0.6rem;
+            border: 1px solid #e2e6ee;
+            font-size: 0.9rem;
+        }
+
+        .about-card {
+            background: var(--white);
+            padding: 1.3rem;
+            border-radius: 1rem;
+            box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+        }
+
+        .about-card p { color: var(--text-muted); }
+
+        /* ---------------- CONTACT ---------------- */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1.3fr;
+            gap: 2rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.6rem 0.7rem;
+            border-radius: 0.5rem;
+            border: 1px solid #d4d9e6;
+        }
+
+        textarea { min-height: 120px; resize: vertical; }
+
+        /* ---------------- FOOTER ---------------- */
+
+        footer {
+            background: var(--blue-dark);
+            color: #d7deec;
+            padding: 1.2rem 1.5rem;
+        }
+
+        footer .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+            .hero { grid-template-columns: 1fr; }
+            .hero-photo-wrapper { order: -1; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="nav">
+        <div class="nav-logo">
+            <img src="logo-aioa.png">
+            <span>AIOA Consulting</span>
+        </div>
+        <div class="nav-cta">
+            <a href="#contact">Book a free consultation</a>
+        </div>
+    </div>
+
+    <div class="hero">
+        <div>
+            <h1><span>Microsoft 365</span> Consulting & Automation</h1>
+            <p class="hero-sub">
+                We help companies optimise Microsoft 365 licences, strengthen security and automate processes so IT stops being a bottleneck.
+            </p>
+
+            <div class="hero-badges">
+                <span class="badge">License optimisation</span>
+                <span class="badge">Security hardening</span>
+                <span class="badge">Automation & scripting</span>
+            </div>
+
+            <div class="hero-actions">
+                <a class="btn-primary" href="#contact">Schedule a call</a>
+                <a class="btn-ghost" href="mailto:info@aioaconsulting.com">Or email us directly →</a>
+            </div>
+        </div>
+
+        <div class="hero-photo-wrapper">
+            <div class="hero-photo-card">
+                <img src="adrian.jpg">
+                <p class="caption">Adrián Fernández · Microsoft 365 Consultant</p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <section id="services">
+        <h2 class="section-title"><span>Services</span> we provide</h2>
+
+        <div class="services-grid">
+            <div class="card">
+                <h3>License optimisation</h3>
+                <p>We analyse your M365 tenant to detect unused accounts and propose a clean licensing model.</p>
+            </div>
+
+            <div class="card">
+                <h3>Security hardening for M365</h3>
+                <p>We review critical security areas and help you close gaps before they become incidents.</p>
+            </div>
+
+            <div class="card">
+                <h3>Automation & tenant management</h3>
+                <p>We design repeatable processes so onboarding, permissions and tasks stop being manual.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="why">
+        <h2 class="section-title">Why <span>AIOA Consulting</span>?</h2>
+
+        <div class="why-grid">
+            <div>
+                <ul class="pill-list">
+                    <li>Measurable outcomes: cost saving, security & stability.</li>
+                    <li>Hands-on M365, Exchange Online & hybrid AD expertise.</li>
+                    <li>Clear documentation & IT team knowledge transfer.</li>
+                    <li>Flexible engagement: audits, projects or support.</li>
+                </ul>
+            </div>
+
+            <div class="about-card">
+                <h3>About Adrián Fernández</h3>
+                <p>Microsoft 365 Consultant specialised in automation, identity and Exchange Online.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title"><span>Let’s talk</span> about your tenant</h2>
+
+        <div class="contact-grid">
+            <form action="mailto:info@aioaconsulting.com" method="post" enctype="text/plain">
+                <label>Name</label>
+                <input type="text" required>
+
+                <label>Email</label>
+                <input type="email" required>
+
+                <label>Message</label>
+                <textarea></textarea>
+
+                <button type="submit" class="btn-primary">Send message</button>
+            </form>
+
+            <div>
+                <p>Prefer email or a call?</p>
+                <p>📞 <a href="tel:+34665088138">+34 665 08 81 38</a></p>
+                <p>✉️ <a href="mailto:info@aioaconsulting.com">info@aioaconsulting.com</a></p>
+                <p>🌐 <a href="https://www.aioaconsulting.com">www.aioaconsulting.com</a></p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div>© <span id="year"></span> AIOA Consulting</div>
+        <div>Microsoft 365 · Automation · Security</div>
+    </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
