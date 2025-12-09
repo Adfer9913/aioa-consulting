@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AIOA Consulting | Microsoft 365 Consulting & Automation</title>
-    <meta name="description" content="AIOA Consulting helps companies optimise Microsoft 365 licences, strengthen security and automate processes.">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -13,23 +13,30 @@
             --blue-dark: #0B1B2B;
             --blue-main: #004C80;
             --blue-light: #2A82DA;
-            --bg-light: #E9F2FB;
             --yellow: #F2C230;
+            --bg-light: #E9F2FB;
             --white: #ffffff;
+            --text-main: #0d0d0d;
+            --text-muted: #555;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Inter', sans-serif;
             background: #f5f7fb;
-            color: #0d0d0d;
+            color: var(--text-main);
             overflow-x: hidden;
         }
 
-        a { text-decoration: none; color: inherit; }
-
-        /* ---------- HEADER ---------- */
+        a {
+            color: var(--blue-main);
+            text-decoration: none;
+        }
 
         header {
             background: var(--bg-light);
@@ -51,7 +58,7 @@
         }
 
         .nav-logo img {
-            height: 45px;
+            height: 40px;
         }
 
         .nav-cta a {
@@ -63,168 +70,137 @@
             white-space: nowrap;
         }
 
-        /* ---------- HERO ---------- */
-
+        /* HERO */
         .hero {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 2.5rem 0 3rem;
+            padding: 2.5rem 1.5rem 3rem;
             display: grid;
             grid-template-columns: 3fr 2fr;
-            gap: 2.5rem;
+            gap: 2.8rem;
             align-items: center;
         }
 
-        .hero h1 {
-            font-size: 2.6rem;
-            margin-bottom: 0.8rem;
-            line-height: 1.2;
+        .hero h1 span {
+            color: var(--blue-main);
         }
-
-        .hero h1 span { color: var(--blue-main); }
 
         .hero-sub {
-            font-size: 1.08rem;
-            margin-bottom: 1.4rem;
-            color: #333;
-        }
-
-        .hero-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.6rem;
-            margin-bottom: 1.7rem;
+            font-size: 1.05rem;
+            margin: 1rem 0 1.6rem;
+            color: #334;
         }
 
         .badge {
-            background: rgba(0,0,0,0.06);
-            padding: 0.4rem 0.9rem;
+            background: #e5ebf5;
+            padding: 0.35rem 0.9rem;
             border-radius: 999px;
             font-size: 0.85rem;
-        }
-
-        .hero-actions {
-            margin-top: 0.8rem;
+            display: inline-block;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
         }
 
         .btn-primary {
             background: var(--blue-main);
-            color: white;
             padding: 0.9rem 1.8rem;
-            font-size: 1.15rem;
             border-radius: 999px;
+            color: var(--white);
             font-weight: 600;
             display: inline-block;
         }
 
-        /* ---------- PHOTO CARD ---------- */
-
-        .hero-photo-wrapper {
-            display: flex;
-            justify-content: center;
-        }
-
         .hero-photo-card {
-            background: white;
-            border-radius: 1.2rem;
+            background: var(--white);
             padding: 1rem;
-            max-width: 300px;
+            border-radius: 1.2rem;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
             text-align: center;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.15);
         }
 
         .hero-photo-card img {
-            width: 260px;
-            height: 260px;
+            width: 240px;
+            height: 240px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: center 10%;
         }
 
-        .hero-photo-card .caption {
-            margin-top: 0.6rem;
-            color: #444;
-        }
-
-        /* ---------- SERVICES ---------- */
-
-        main {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2.5rem 1.5rem 4rem;
-        }
-
+        /* TITLES (blue restored) */
         .section-title {
-            font-size: 1.55rem;
-            margin-bottom: 1.2rem;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
         }
 
+        .section-title span {
+            color: var(--blue-main);
+        }
+
+        /* SERVICES */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.4rem;
+            gap: 1.8rem;
         }
 
         .card {
-            background: white;
-            padding: 1.5rem;
+            background: var(--white);
+            padding: 1.7rem;
             border-radius: 1rem;
             border-top: 4px solid var(--blue-main);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease;
         }
 
-        /* ---------- CONTACT SECTION ---------- */
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        /* CONTACT */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
 
         iframe {
             width: 100%;
-            height: 650px;
+            min-height: 600px;
             border-radius: 1rem;
             border: none;
         }
 
-        /* ---------- FOOTER ---------- */
-
+        /* FOOTER */
         footer {
             background: var(--blue-dark);
             color: #d7deec;
             padding: 1.2rem 1.5rem;
+            margin-top: 2rem;
         }
 
         footer .footer-inner {
             max-width: 1100px;
-            margin: 0 auto;
+            margin: auto;
             display: flex;
             justify-content: space-between;
         }
 
-        /* ---------- MOBILE FIXES ---------- */
-
-        @media (max-width: 750px) {
-
-            .nav {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.8rem;
-            }
+        /* MOBILE FIXES */
+        @media (max-width: 850px) {
 
             .hero {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
 
-            .hero-actions {
-                display: flex;
-                justify-content: center;
-                margin-top: 1rem;
+            .nav {
+                flex-direction: column;
+                gap: 1rem;
             }
 
-            .hero-badges {
-                justify-content: center;
-            }
-
-            .btn-primary {
-                width: 90%;
-                max-width: 340px;
+            .contact-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -235,7 +211,7 @@
 <header>
     <div class="nav">
         <div class="nav-logo">
-            <img src="logo-aioa.png" alt="">
+            <img src="logo-aioa.png">
             <span>AIOA Consulting</span>
         </div>
 
@@ -247,7 +223,6 @@
     <div class="hero">
         <div>
             <h1><span>Microsoft 365</span> Consulting & Automation</h1>
-
             <p class="hero-sub">
                 We help organisations build a secure, automated and fully optimised Microsoft 365 environment.
             </p>
@@ -258,22 +233,19 @@
                 <span class="badge">Automation & scripting</span>
             </div>
 
-            <div class="hero-actions">
-                <a class="btn-primary" href="#contact">Schedule a call</a>
-            </div>
+            <a class="btn-primary" href="#contact">Schedule a call</a>
         </div>
 
-        <div class="hero-photo-wrapper">
-            <div class="hero-photo-card">
-                <img src="adrian.jpg" alt="">
-                <p class="caption">Adrián Fernández · Microsoft 365 Consultant</p>
-            </div>
+        <div class="hero-photo-card">
+            <img src="adrian.jpg">
+            <p class="caption">Adrián Fernández · Microsoft 365 Consultant</p>
         </div>
     </div>
 </header>
 
 <main>
 
+    <!-- SERVICES -->
     <section id="services">
         <h2 class="section-title"><span>Services</span> we provide</h2>
 
@@ -290,17 +262,28 @@
 
             <div class="card">
                 <h3>Automation & scripting</h3>
-                <p>We automate onboarding, permissions, workflows and admin tasks using PowerShell & Graph API.</p>
+                <p>We automate onboarding, workflows and admin tasks using PowerShell & Microsoft Graph.</p>
             </div>
         </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact">
-        <h2 class="section-title"><span>Let’s talk</span> about your tenant</h2>
+        <h2 class="section-title">Let’s talk <span>about your tenant</span></h2>
 
-        <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=7cdPpwJ_WE2LFLmwQiNv3QO3VYcVRyZAqodJdf0yPkZUQ1ZGNDJEN1hXTkZBNFhDWjA2NVdSMThSRC4u&embed=true"></iframe>
+        <div class="contact-grid">
+
+            <iframe src="https://forms.office.com/Pages/ResponsePage.aspx?id=7cdPpwJ_WE2LFLmwQiNv3QO3VYcVRyZAqodJdf0yPkZUQ1ZGNDJEN1hXTkZBNFhDWjA2NVdSMThSRC4u&embed=true"></iframe>
+
+            <div>
+                <p>Prefer email or a call?</p>
+                <p>📞 <a href="tel:+34665088138">+34 665 08 81 38</a></p>
+                <p>✉️ <a href="mailto:info@aioaconsulting.com">info@aioaconsulting.com</a></p>
+                <p>🌐 <a href="https://www.aioaconsulting.com">www.aioaconsulting.com</a></p>
+            </div>
+
+        </div>
     </section>
-
 </main>
 
 <footer>
